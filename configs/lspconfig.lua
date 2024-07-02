@@ -69,4 +69,29 @@ lspconfig.eslint.setup {
     root_dir = util.root_pattern(".eslintrc.js", "node_modules", ".git"),
     filetypes = {"vue", "javascript", "typescript", "jsx", "tsx", "vue"}
 }
+-- rust
+lspconfig.rust_analyzer.setup{
+    on_attach = on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
+    settings = {
+        ["rust-analyzer"] = {
+          assist = {
+            importGranularity = "module",
+            importPrefix = "self",
+          },
+          cargo = {
+            loadOutDirsFromCheck = true,
+          },
+          procMacro = {
+            enable = true,
+          },
+          checkOnSave = {
+            command = "clippy",
+          },
+        },
+    },
+}
+
+
 
