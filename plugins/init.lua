@@ -1,10 +1,11 @@
 return {{
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
+    cmd = "ConformInfo",
     config = function()
         require "configs.conform"
     end
-}, {"williamboman/mason-lspconfig.nvim"}, -- These are some examples, uncomment them if you want to see them work!
+}, -- These are some examples, uncomment them if you want to see them work!
 {
     "neovim/nvim-lspconfig",
     config = function()

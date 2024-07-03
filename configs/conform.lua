@@ -15,9 +15,7 @@ local options = {
         sh = {"shfmt"}
     },
 
-    format_on_save = {
-        -- These options will be passed to conform.format()
-        timeout_ms = 500,
+    format_after_save = {
         lsp_fallback = true
     }
 }
