@@ -5,12 +5,11 @@
 local M = {}
 
 M.ui = {
-	theme = "nightfox",
-
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	theme = "nightfox",	
+	nvdash = {
+        load_on_startup = true,
+	header={}
+	}
 }
 
 return M
